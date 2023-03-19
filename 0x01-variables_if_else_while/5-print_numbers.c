@@ -7,9 +7,10 @@
  * Return: Zero value
  */
 int main(void) {
-    int n;
-    for (int n = 0; i <1; i++)
-        printf("%d", i);
+    int n
+	    ;
+    for (n = 0; n <1; n++)
+        printf("%d", n);
     printf("\n");
     return 0;
 }
