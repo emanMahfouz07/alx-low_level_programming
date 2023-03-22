@@ -26,8 +26,8 @@ int main(void)
 		{
 			sum += fib2;
 		}
-		printf("%ld\n", sum);
-
-		return (0);
 	}
+	printf("%ld\n", sum);
+
+	return (0);
 }
