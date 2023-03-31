@@ -16,38 +16,36 @@
 */
 void print_buffer(char *b, int size)
 {
-	int i = 0, j;
 
-	if (size < 0)
-	{
-		printf('\n');
-		return;
-	}
+	int i, j;
+
+	i = 0;
 
 	while (i < size)
 	{
-		if (i % 10 == 0)
-			printf("%08x: ", i);
-		for (j = i; j < i + 9; j += 2)
+		printf("%08x: ", i);
+		for (j = i; j < i + 10; j++)
 		{
-			if ((j < size) && ((j + 1) < size))
-				printf("%02x%02x: ", b[j], b[j + 1]);
+			if (j < size)
+				printf("%02x", (unsigned char)b[j]);
 			else
-			{
-				while (++j <= i + 10)
-					printf(" ");
-				printf(" ");
-			}
+				printf("  ");
+			if (j % 2)
+				putchar(' ');
 		}
-		for (j = i; j < i + 9 && j < size; j++)
+		for (j = i; j < i + 10; j++)
 		{
-			if (b[j] >= 32 && b[j] <= 126)
-				printf("%c", b[j]);
-			else
-				printf(".");
-		}
-		printf('\n');
-		i += 10;
-	}
-}
+			if (j >= size)
+				break;
 
+			if (b[j] >= ' ' && *(b + j) <= '~')
+				putchar(*(b + j));
+			else
+				putchar('.');
+		}
+		i += 10;
+		if (i < size)
+			putchar('\n');
+	}
+	putchar('\n');
+}
