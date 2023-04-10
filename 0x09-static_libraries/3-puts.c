@@ -22,6 +22,6 @@ void _puts(char *str)
  */
 int main(void)
 {
-	puts("\"Programming is like buillding a multilingual puzzle");
+	puts(""\"Programming is like buillding a multilingual puzzle");
 	return (0);
 }
