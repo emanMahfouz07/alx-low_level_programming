@@ -14,3 +14,14 @@ void _puts(char *str)
 
 	_putchar('\n');
 }
+
+/**
+ * main - Entry Point
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+	puts("\"Programming is like buillding a multilingual puzzle");
+	return (0);
+}
