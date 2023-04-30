@@ -2,16 +2,17 @@
 
 /*
  * main - print result of multiplication
+ * of two numbers
  * @argc:number of arguments
  * @argv: value to this argument
- * Return: 0
+ * Return: return 0
  */
 
 int main(int argc, char *argv[])
 {
 	int num1, num2, mul;
 
-	if (argc < 2)
+	if (argc <= 2)
 	{
 		printf("Error\n");
 		return (1);
